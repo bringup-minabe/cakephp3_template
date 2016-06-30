@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import "compass";
+
+/**
+ * Setting
+*/
+$page_size: 980px;
+$link : #333333;
+
+/**
+ * Mixin
+*/
+@mixin page_size_auto {
+	width: $page_size;
+	margin: 0 auto;
+}
+
+html {
+	 box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html,body{
+     height:100%;
+}
+body {
+	font-size: 13px;
+    line-height: 1.5;
+	color: #333333;
+    font-family: 'メイリオ','meiryo','ＭＳ Ｐゴシック','MS P Gothic','ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','ヒラギノ丸ゴシック Pro W3','Hiragino maru Gothic Pro','Helvetica','sans-serif';
+}
+p {
+	padding-bottom: 15px;
+}
+p,dt,dd,td,li,h1,h2,h3,h4,h5 {
+     word-break: break-all;
+    max-height: 999999px;
+    -webkit-text-size-adjust: 100%;
+}
+img {
+	border: none;
+	max-width: 100%;
+	height: auto;
+	vertical-align: top;
+}
+.clearfix:before {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+em {
+	font-style: normal;
+}
+strong {
+    font-weight: bold;
+}
+ol {
+    padding-bottom: 10px;
+    list-style-type: decimal;
+    padding-left: 20px;
+    li {
+        padding: 5px 0;
+    }
+}
+/* =========================================================
+Link
+========================================================= */
+a:link {
+    color:$link;
+    text-decoration:none;
+}
+a:visited {
+    color:$link;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+}
+a img, .hover_op {
+     -webkit-transition: opacity 0.2s ease-in-out;
+        -moz-transition: opacity 0.2s ease-in-out;
+         -ms-transition: opacity 0.2s ease-in-out;
+          -o-transition: opacity 0.2s ease-in-out;
+             transition: opacity 0.2s ease-in-out;
+}
+a img:hover, .hover_op:hover {
+     opacity: 0.8;
+}
+/* =========================================================
+Container
+========================================================= */
+#container {
+    width: 100%;
+    min-width: $page_size;
+	//@include page_size_auto;
+	position: relative;
+	height:auto !important; /*IE6対策*/
+	height: 100%; /*IE6対策*/
+	min-height: 100%;
+}
+/* =========================================================
+Header
+========================================================= */
+#header {
+    width: 100%;
+    height: auto;
+}
+/* =========================================================
+Maincontens
+========================================================= */
+$footer_hight : 448px;
+#maincontens {
+    @include page_size_auto;
+}
+/* =========================================================
+Pankuzu
+========================================================= */
+#pankuzu {
+    @include page_size_auto;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+}
+/* =========================================================
+Footer
+========================================================= */
+#footer {
+    width: 100%;
+    height:$footer_hight;
+    position:absolute;
+    bottom:0;
+}
