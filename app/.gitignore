@@ -1,6 +1,6 @@
-/vendor/*
+/vendor
 /config/app.php
-/tmp/*
-/logs/*
-/node_modules/*
+/tmp
+/logs
+/node_modules
 /.sass-cache

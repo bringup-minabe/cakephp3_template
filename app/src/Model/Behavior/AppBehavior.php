@@ -9,7 +9,8 @@ use Cake\Utility\Text;
  */
 class AppBehavior extends Behavior
 {
-    function beforeSave($event, $entity, $options) {
+    function beforeSave($event, $entity, $options)
+    {
 
 		/**
 		 * 新規保存時処理
